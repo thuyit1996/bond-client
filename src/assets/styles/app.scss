@@ -1,0 +1,13 @@
+// ENTRY POINT OF GENERAL STYLING
+
+// Variable & mixins
+@import './_variables';
+@import './_mixin';
+
+// Bootstrap
+@import './bootstrap/scss/bootstrap.scss';
+
+// Global
+@import './global';
+@import './button';
+@import './animation';

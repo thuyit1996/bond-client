@@ -1,0 +1,161 @@
+// Input
+input[type="radio"],
+input[type="checkbox"] {
+  & + label {
+    margin-bottom: 0;
+  }
+}
+
+// Button
+.btn {
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+
+// Button Normal
+.btn-default {
+  @include button-variant($btn-default-bg, $btn-default-border, $btn-default-bg-hover, $btn-default-border-hover, $btn-default-border-active, $btn-default-bg-active);
+
+  @include hover {
+    color: $btn-default-color-hover;
+    box-shadow: $btn-box-shadow;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show>&.dropdown-toggle {
+    color: $btn-default-color-active;
+
+    &:focus {
+      box-shadow: $btn-box-shadow;
+    }
+  }
+}
+
+// Button Primary
+.btn-primary {
+  @include button-variant($btn-primary-bg, $btn-primary-border, $btn-primary-bg-hover, $btn-primary-border-hover, $btn-primary-border-active, $btn-primary-bg-active);
+
+  @include hover {
+    color: $btn-primary-color-hover;
+    box-shadow: $btn-box-shadow;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show>&.dropdown-toggle {
+    color: $btn-primary-color-active;
+
+    &:focus {
+      box-shadow: $btn-box-shadow;
+    }
+  }
+}
+
+// Button Secondary
+.btn-secondary {
+  @include button-variant($btn-secondary-bg, $btn-secondary-border, $btn-secondary-bg-hover, $btn-secondary-border-hover, $btn-secondary-border-active, $btn-secondary-bg-active);
+
+  @include hover {
+    color: $btn-secondary-color-hover;
+    box-shadow: $btn-box-shadow;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show>&.dropdown-toggle {
+    color: $btn-secondary-color-active;
+
+    &:focus {
+      box-shadow: $btn-box-shadow;
+    }
+  }
+}
+
+// Button Outline Default
+.btn-outline-default {
+  background: $white;
+  position: relative;
+  @include button-outline-variant($btn-default-border, #fff, $btn-default-bg, $btn-default-border);
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - (#{$btn-padding-x} * 2));
+    bottom: 0;
+    height: 3px;
+    left: $btn-padding-x;
+    background: $btn-default-bg;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $white;
+    background-color: #555A5C;
+    border-color: #555A5C;
+
+    &:after {
+      background: #555A5C;
+    }
+  }
+}
+
+// Button Outline Primary
+.btn-outline-primary {
+  background: $white;
+  position: relative;
+  @include button-outline-variant($btn-primary-border, #fff, $btn-primary-bg, $btn-primary-border);
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - (#{$btn-padding-x} * 2));
+    bottom: 0;
+    height: 3px;
+    left: $btn-padding-x;
+    background: $btn-primary-bg;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $white;
+    background-color: $link-hover-color;
+    border-color: $link-hover-color;
+
+    &:after {
+      background: $link-hover-color;
+    }
+  }
+}
+
+// Button Outline Secondary
+.btn-outline-secondary {
+  background: $white;
+  position: relative;
+  @include button-outline-variant($btn-secondary-border, #fff, $btn-secondary-bg, $btn-secondary-border);
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - (#{$btn-padding-x} * 2));
+    bottom: 0;
+    height: 3px;
+    left: $btn-padding-x;
+    background: $btn-secondary-bg;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $white;
+    background-color: lighten($btn-secondary-bg, 20%);
+    border-color: lighten($btn-secondary-border, 20%);
+
+    &:after {
+      background: lighten($btn-secondary-bg, 20%);
+    }
+  }
+}

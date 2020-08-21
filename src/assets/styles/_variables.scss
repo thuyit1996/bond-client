@@ -1,0 +1,200 @@
+// COLOR
+// INFO: copy from default of bootstrap,
+// grayscale is defined by design ( inspect text, background, border )
+$white:    #fff;
+$gray-100: #f2f1f0;
+$gray-200: #e1e1e1;
+$gray-300: #d5d5d5;
+$gray-400: #a1a1a1;
+$gray-500: #999999;
+$gray-600: #787878;
+$gray-700: #666666;
+$gray-800: #333333;
+$gray-900: #282828;
+$black:    #000;
+
+// GRAYS NAME
+// -------------------------
+
+$gray-darkest:           $gray-900;
+$gray-darker:            $gray-800;
+$gray-dark:              $gray-700;
+$gray:                   $gray-500;
+$gray-light:             $gray-300;
+$gray-lighter:           $gray-200;
+$gray-lightest:          $gray-100;
+
+// BRAND COLORS
+// -------------------------
+
+$primary:         #008347;
+$secondary:       #ed1c24;
+$success:         #26AD78;
+$warning:         #FF8200;
+$danger:          #FF314B;
+$light:             $gray-lightest;
+$dark:              $gray-darker;
+
+// TYPOGRAPHY
+// -------------------------
+// 1. Font size
+$font-size-large:             4.8rem;
+$font-size-large-mobile:      3.0rem;
+
+$font-size-base:              2.3rem; // Overwrite bootstrap $font-size-base, now it is 23px ( the default text font-size from design guide )
+$font-size-base-mobile:       1.8rem;
+
+$font-size-small:             1.4rem;
+$font-size-small-mobile:      1.4rem;
+
+$font-size-smallest:          1.2rem;
+$font-size-smallest-mobile:   1.2rem;
+
+// 2. Heading font size
+$h1-font-size:                6rem;
+$h2-font-size:                4.8rem;
+$h3-font-size:                3.6rem;
+$h4-font-size:                3.0rem;
+$h5-font-size:                2.3rem;
+$h6-font-size:                2.2rem;
+
+$h1-font-size-mobile:         3.6rem;
+$h2-font-size-mobile:         3.0rem;
+$h3-font-size-mobile:         3rem;
+$h4-font-size-mobile:         3rem;
+$h5-font-size-mobile:         2.4rem;
+$h6-font-size-mobile:         1.8rem;
+
+// 3. Line height
+$line-height-base:            1.2;
+
+// 4. Font weight
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-extra-bold:      800;
+
+// 5. Font family
+$font-family-base:            KittihadaRoman55;
+$font-family-eurothai:        Eurothai;
+$font-family-eurothai-demi:   Eurothai-Demi;
+$font-family-Kittithada-Bold75: KittithadaBold75;
+$font-family-Kittihada-Medium65: KittihadaMedium65;
+
+// 6. Breakpoint
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 325px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1400px
+);
+
+// 7. Container
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+// INFO: based on statistic here: https://gs.statcounter.com/screen-resolution-stats/tablet/worldwide/2018
+// It is NOT a complete solution but it solve 90% cases.
+$desktop-min-width: 1281px;
+
+// INFO: we don't use those variable, so keep them intact.
+// $blue:    #007bff !default;
+// $indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #e83e8c !default;
+// $red:     #dc3545 !default;
+// $orange:  #fd7e14 !default;
+// $yellow:  #ffc107 !default;
+// $green:   #28a745 !default;
+// $teal:    #20c997 !default;
+// $cyan:    #17a2b8 !default;
+
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default;
+
+// COMPONENT
+// -------------------------
+// 1. Body
+$body-bg:                   $white;
+$body-color:                $black;
+$text-color:                $gray;
+$border-color:              $gray-light;
+
+// 2. Link
+$link-color:                $primary;;
+$link-decoration:           none;
+$link-hover-color:          darken($link-color,10%);;
+$link-hover-decoration:     underline;
+
+// 3. Other component we don't use, so we use bootstrap defaults
+$modal-backdrop-bg:         rgba($black, 0.2);
+$modal-md:                  650px;
+
+// CUSTOM
+// BUTTONS
+// -------------------------
+
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         0.5rem;
+$input-btn-padding-x:         3rem;
+$input-btn-font-family:       null;
+$input-btn-font-size:         $font-size-base;
+$input-btn-line-height:       $line-height-base;
+
+$btn-box-shadow:              0 0 5px rgba($black, 0.2);
+
+$btn-padding-y:               $input-btn-padding-y;
+$btn-padding-x:               $input-btn-padding-x;
+$btn-font-family:             $input-btn-font-family;
+$btn-font-size:               $font-size-small;
+$btn-line-height:             2;
+$btn-border-radius:           0;
+
+// button style
+$btn-default-color:              $white;
+$btn-default-bg:                 $text-color;
+$btn-default-border:             $text-color;
+$btn-default-color-hover:        $text-color;
+$btn-default-bg-hover:           $white;
+$btn-default-border-hover:       $white;
+$btn-default-color-active:       $text-color;
+$btn-default-bg-active:          rgba($btn-default-bg, 0.1);
+$btn-default-border-active:      rgba($btn-default-bg, 0.1);
+
+$btn-primary-color:              $white;
+$btn-primary-bg:                 $primary;
+$btn-primary-border:             $primary;
+$btn-primary-color-hover:        $primary;
+$btn-primary-bg-hover:           $white;
+$btn-primary-border-hover:       $white;
+$btn-primary-color-active:       $primary;
+$btn-primary-bg-active:          rgba($btn-primary-bg, 0.1);
+$btn-primary-border-active:      rgba($btn-primary-bg, 0.1);
+
+$btn-secondary-color:            $white;
+$btn-secondary-bg:               $secondary;
+$btn-secondary-border:           $secondary;
+$btn-secondary-color-hover:      $secondary;
+$btn-secondary-bg-hover:         $white;
+$btn-secondary-border-hover:     $white;
+$btn-secondary-color-active:     $secondary;
+$btn-secondary-bg-active:        rgba($btn-secondary-bg, 0.1);
+$btn-secondary-border-active:    rgba($btn-secondary-bg, 0.1);
+
+// INFO: z-index here
+
+// INFO: variables for pages here
+// PAGE

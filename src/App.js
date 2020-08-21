@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import Header from './components/Header';
 import Routes from './routes';
 import GlobalStyle from './styles/global';
-import './assets/bootstrap/scss/bootstrap.scss';
 import store from './store';
 
 function App() {

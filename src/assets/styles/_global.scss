@@ -1,0 +1,63 @@
+html {
+  // INFO: set font-size for html to 62.5% mean that <html> element will have font-size qual to 62.5% * {browser font setting default = 16px ( bootstrap also assum 16px ) } = 10px
+  // From now, 1rem will equal to 10 px. This will be easier to scale font-size by rem if one rem is 10px instead of 16px
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@include media-breakpoint-down(md) {
+  h1 {
+    font-size: $h1-font-size-mobile;
+  }
+
+  h2 {
+    font-size: $h2-font-size-mobile;
+  }
+
+  h3 {
+    font-size: $h3-font-size-mobile;
+  }
+
+  h4 {
+    font-size: $h4-font-size-mobile;
+  }
+
+  h5 {
+    font-size: $h5-font-size-mobile;
+  }
+
+  h6 {
+    font-size: $h6-font-size-mobile;
+  }
+
+  body {
+    font-size: $font-size-base-mobile;
+  }
+}
+
+// Style Override
+
+ul {
+  margin-bottom: 0;
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
