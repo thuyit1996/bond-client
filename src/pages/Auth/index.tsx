@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 // import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { Login } from './Login';
 type Props = {
   match: any,
@@ -61,6 +61,7 @@ export default function Auth({match} : Props) {
           </Typography>
           <Route path={`${match.path}/login`}
              render={() => <Login />} />
+          <Redirect to={{ pathname: `${match.path}/login`}} />
         </div>
       </Grid>
     </Grid>
